@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Raleway:ital,wght@0,200;0,300;1,100&family=Roboto+Mono:ital,wght@0,200;1,100&display=swap');
+:root{
+  --hedvig : 'Hedvig Letters Serif', serif;
+  --real : 'Raleway', sans-serif;
+  --mono : 'Roboto Mono', monospace;
+}
+.hedvig{
+  font-family: var(--hedvig);
+}
+.real{
+  font-family: var(--real);
+}
+.mono{
+  font-family: var(--mono);
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/hero_5.jpg);
+    background-size: cover;
+    background-position: fixed;
+}
+.navigation{
+  background-color: whitesmoke;
+  position: fixed;
+  z-index: 999;
+}
+.navbar{
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav a{
+    transition: all 0.5s linear;
+}
+.navbar .nav a:hover{
+    color: red;
+}
+.banner{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner h1{
+  font-size: 3.5rem;
+}
+.hey{
+  width: 100%;
+  background-color: whitesmoke;
+}
+.hey .our{
+  width: 90%;
+  height: 15vh;
+  background-color: white;
+  border-radius: 10px; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hey .our button{
+  padding: 10px 15px;
+  margin-top: 2rem;
+  border-radius: 30px;
+  width: 100%;
+}
+.hey button{
+  padding: 10px 2rem;
+  margin-top: 2rem;
+  border-radius: 30px;
+  border: 0;
+}
+.hey h2{
+  font-size: 4rem;
+}
+
+.leadership{
+  width: 100%;
+  padding: 2rem 0;
+}
+.leadership .card .back-content{
+  background-image: url(/images/person_3.jpg);
+  background-size: cover;
+}
+.leadership .person .back-content{
+  background-image: url(/images/person_2.jpg);
+  background-size: cover;
+}
+.leadership .will .back-content{
+  background-image: url(/images/person_1.jpg);
+  background-size: cover;
+}
+.leadership .card .front  p{
+  line-height: 1.5;
+} 
+.leadership .card .content .back .back-content li{
+  bottom: 0;
+}
+.leadership .card .front-content img{
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  display: block;
+  margin-top: 2rem;
+}
+.leadership .person .front-content img{
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  display: block;
+  margin-top: 2rem;
+}
+.leadership .will .front-content img{
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  display: block;
+  margin-top: 2rem;
+}
+.leadership .card .front-content #item{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+ gap: 3rem; 
+}
+.leadership .card, .will .front-content a{
+  text-decoration: none;
+  color: red;
+}
+.leadership .person .front-content a{
+  text-decoration: none;
+  color: red;
+}
+.card, .person, .will {
+  overflow: visible;
+  width: 190px;
+  height: 254px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  /* justify-content: center;
+  display: flex;
+  align-items: center; */
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  align-items: center;
+  gap: 30px;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+.person:hover .content {
+  transform: rotateY(180deg);
+}
+.will:hover .content {
+  transform: rotateY(180deg);
+}
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  width: 50%;
+}
+
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.rooms{
+  width: 100%;
+  padding: 4rem 0;
+}
+.rooms h2{
+  font-size: 3rem;
+}
+.rooms p{
+  width: 60%;
+  opacity: 0.8;
+}
+.rooms__content a{
+  text-decoration: none;
+  color: #ff2233;
+}
+.rooms__content .img{
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.rooms__content .img img:hover{
+  transform: scale(1.1);
+}
+.rooms__content .img img{
+  transform: scale(1);
+  transition: all 0.5s linear;
+}
+.photos{
+  width: 100%;
+  padding: 4rem 0;
+  background-color: whitesmoke;
+}
+.photos h2{
+  font-size: 3rem;
+}
+.photos p{
+  width: 60%;
+  opacity: 0.8;
+}
+.menu{
+  width: 100%;
+  padding: 4rem 0;
+  background-image: url(/images/slider-4.jpg);
+  background-size: cover;
+  color: #FFF;
+}
+.menu__content a{
+  font-size: 1.3rem;
+  color: red;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  letter-spacing: 3px;
+}
+.menu__content .bottom{
+  border-bottom: 3px solid #FFF ;
+  margin-bottom: 2rem;
+}
+.menu__content a:hover{
+  color: #FFF;
+}
+.menu__content span{
+  font-weight: bold;
+}
+.menu__content p{
+  opacity: 0.9;
+}
+.events{
+  width: 100%;
+  height: auto;
+  padding: 4rem 0;
+  background-color: whitesmoke;
+}
+.events h2{
+  font-size: 4rem;
+  font-weight: 600;
+}
+.events p{
+  opacity: 0.7;
+}
+.events h3{
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.events h3:hover{
+  color: red;
+}
+.events span{
+  opacity: 0.8;
+  letter-spacing: 3px;
+}
+.contact{
+  width: 100%;
+  padding: 4rem 0;
+}
+.contact p{
+  opacity: 0.8;
+}
+.contact h5{
+  opacity: 0.8;
+  margin-top: 2rem;
+}
+.contact a{
+  opacity: 1;
+  color: #000;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+.best{
+  width: 100%;
+  padding: 4rem 0;
+  background-image: url(/images/slider-6.jpg);
+  background-size:  cover;
+  background-repeat: no-repeat;
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer{
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #1A1A1A;
+  color: #ffff;
+}
+.copy{
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #1A1A1A;
+  color: #ffff;
+}

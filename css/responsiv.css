@@ -1,0 +1,20 @@
+@media only screen and (max-width:768px) {
+    .nav a{
+        display: none;
+    }
+    .nav button{
+        display: none;
+    }
+    .photos p{
+        width: 100%;
+    }
+    .menu p{
+        width: 100%;
+    }
+    .events p{
+        width: 100%;
+    }
+    .contact p{
+        width: 100%;
+    }
+}
